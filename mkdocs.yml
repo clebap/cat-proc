@@ -1,0 +1,134 @@
+site_name: My Docs
+site_name: Catálogo de procedimientos municipales
+site_description: Documentación de los Procedimientos administrativos de los municipios de la Isla de Tenerife.
+
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+  custom_dir: overrides
+
+extra_css:
+  - assets/css/estilos.css
+extra_javascript:
+  - assets/js/filtros.js
+
+nav:
+  - Inicio: index.md
+  - Procedimientos: procedimientos.md
+  - Fichas:
+    - Actividad Econ Mica Y Consumo:
+        - Baja Voluntaria de la Autorización para el Ejercicio de la Venta Ambulante: procedimientos/C057.md
+        - Licencia de Actividad (Modificación o Renuncia): procedimientos/C066.md
+        - Licencia de Actividades y Espectáculos Públicos: procedimientos/C067.md
+        - Solicitud de Adhesión al Sistema de Arbitraje: procedimientos/C076.md
+        - Solicitud de Mediación: procedimientos/C046.md
+    - Agua Y Residuos:
+        - Abastecimiento de Aguas (Baja): procedimientos/C022.md
+        - Abastecimiento de Aguas (Cambio de Titularidad): procedimientos/C017.md
+        - Verificación, Lectura o Cambio de Ubicación de Contadores de Aguas: procedimientos/C055.md
+    - Alta Terceros:
+        - Alta a terceros: procedimientos/C007.md
+    - Animales:
+        - Alta, Baja o Modificación de Datos en el Registro de Animales: procedimientos/C023.md
+        - Solicitud de Licencia para la Tenencia de Animales Potencialmente Peligrosos: procedimientos/C010.md
+    - Archivo:
+        - Solicitud de Consulta de Fondos del Archivo: procedimientos/C083.md
+    - Gesti N Fical Y Tributaria:
+        - Autoliquidación: procedimientos/C024.md
+        - Comunicación del Cambio de Datos que figuran en el Padrón Fiscal: procedimientos/C058.md
+        - Domiciliación bancaria de recibos periódicos: procedimientos/C019.md
+        - Interposición de un Recurso de Reposición de Actos de Naturaleza Tributaria: procedimientos/C065.md
+        - Liquidación (a Instancia de Parte): procedimientos/C068.md
+        - Solicitud de Aplazamiento o Fraccionamiento de Obligaciones Tributarias: procedimientos/C038.md
+        - Solicitud de Bonificación o Exención de un Tributo: procedimientos/C079.md
+        - Solicitud de Certificado de Deuda a mi Favor: procedimientos/C080.md
+        - Solicitud de Declaración de Nulidad de Pleno Derecho de Actos Administrativos de Naturaleza Tributaria: procedimientos/C084.md
+        - Solicitud de Devolución de Ingresos Indebidos: procedimientos/C044.md
+        - Solicitud de la Devolución de Ingresos Derivada de la Normativa del Tributo (Art. 31 LGT): procedimientos/C085.md
+    - Infraestructura Viaria:
+        - Aviso de Incidencia en la Vía Pública: procedimientos/C012.md
+        - Corte de la Vía Pública: procedimientos/C029.md
+        - Solicitud para la Renumeración o Denominación de una Vía Pública: procedimientos/C090.md
+        - Solicitud para la gestión de la Tarjeta de Aparcamiento para Personas en Situación de Discapacidad: procedimientos/C089.md
+    - Instancia General:
+        - Instancia General: procedimientos/C002.md
+    - Necesidad Social:
+        - Acceso al Servicio de Teleasistencia o de Ayuda a Domicilio: procedimientos/C018.md
+        - Ingreso en Centro de Asistencia Social: procedimientos/C062.md
+        - Justificación de Subvención Concedida: procedimientos/C014.md
+        - Solicitud de Alta en los Servicios Sociales: procedimientos/C077.md
+        - Solicitud de Certificado de una Subvención Concedida: procedimientos/C020.md
+        - Solicitud de Prestación de Servicios Sociales: procedimientos/C049.md
+        - Subvenciones Directas o Nominativas: procedimientos/C053.md
+    - Participaci N Ciudadana:
+        - Ejercicio de Derechos ante el Registro de Asociaciones: procedimientos/C060.md
+        - Participación en la Elaboración de Normativa: procedimientos/C069.md
+        - Petición de consulta popular: procedimientos/C037.md
+    - Patrimonio:
+        - Solicitud de Uso Puntual de un Bien: procedimientos/C051.md
+    - Poblaci N Y Territorio:
+        - Solicitud de Alta o Renovación de la Inscripción en el Padrón Municipal de Habitantes: procedimientos/C003.md
+        - Solicitud de Baja en el Padrón Municipal de Habitantes: procedimientos/C006.md
+        - Solicitud de modificación de datos en el Padrón Municipal de Habitantes: procedimientos/C047.md
+        - Solicitud para la celebración de Matrimonio Civil: procedimientos/C052.md
+    - Polic A Local Y Protecci N Civil:
+        - Consignación en la Oficina de Objetos Perdidos: procedimientos/C028.md
+        - Solicitud de Tarjeta de Armas: procedimientos/C021.md
+    - Problaci N Y Territorio:
+        - Solicitud de Certificado o Volante de Convivencia: procedimientos/C082.md
+    - Promoci N De La Cultura:
+        - Inscripción en Actividades y Cursos: procedimientos/C063.md
+    - Protecci N De Datos :
+        - Ejercicio de los Derechos de Rectificación, Supresión, Limitación, Portabilidad u Oposición en relación con Datos de Carácter Personal: procedimientos/C031.md
+        - Ejercicio del Derecho de Acceso (Datos de Carácter Personal): procedimientos/C008.md
+        - Formulario de Contacto con el Delegado de Protección de Datos: procedimientos/C061.md
+    - Quejas Y Sugerencias:
+        - Quejas y Sugerencias: procedimientos/C009.md
+        - Reclamaciones de Consumo: procedimientos/C072.md
+        - Reclamación contra la Solicitud de Información Accesible y Queja: procedimientos/C071.md
+        - Solicitudes de Información Accesible y Quejas: procedimientos/C091.md
+    - Responsabilidad Patrimonial:
+        - Solicitud de Responsabilidad Patrimonial: procedimientos/C016.md
+    - Secretar A General:
+        - Aportación de Documentos: procedimientos/C011.md
+        - Comunicaciones sobre Requisitos de Accesibilidad: procedimientos/C059.md
+        - Comunicación: procedimientos/C027.md
+        - Declaración Responsable: procedimientos/C030.md
+        - Interposición de Recurso Administrativo: procedimientos/C064.md
+        - Servicios Públicos (Alta, Baja o Modificación): procedimientos/C073.md
+        - Solicitud de Acceso a una Notificación Rechazada: procedimientos/C074.md
+        - Solicitud de Autorización: procedimientos/C040.md
+        - Solicitud de Certificado o Informe: procedimientos/C042.md
+    - Servicios B Sicos:
+        - Licencia de Auto -Taxi (Transmisión): procedimientos/C033.md
+        - Licencia de Vehículos Especiales: procedimientos/C034.md
+        - Solicitud de la Tarjeta de Aparcamiento para Residentes en zonas de Estacionamiento Limitado: procedimientos/C086.md
+        - Sustitución de un Vehículo Sujeto a una Licencia de Auto-Taxi: procedimientos/C054.md
+    - Tesorer A:
+        - Constitución de Garantía: procedimientos/C013.md
+        - Solicitud de Devolución de Garantía: procedimientos/C043.md
+    - Transparencia:
+        - Derecho de acceso a la información pública: procedimientos/C001.md
+        - Solicitud de Reuniones y Entrevistas con el Personal de esta Entidad: procedimientos/C088.md
+    - Urbanismo:
+        - Licencia de Aprovechamiento: procedimientos/C032.md
+        - Modificación del Planeamiento de Desarrollo: procedimientos/C035.md
+        - Modificación, Revocación o Renuncia de la Licencia de Ocupación: procedimientos/C036.md
+        - Planeamiento General (Modificación): procedimientos/C070.md
+        - Solicitud de Actuación Urbanística: procedimientos/C075.md
+        - Solicitud de Aprobación de Planeamiento de Desarrollo: procedimientos/C039.md
+        - Solicitud de Aprobación de un Proyecto de Compensación: procedimientos/C078.md
+        - Solicitud de Certificado o Informe Urbanístico: procedimientos/C081.md
+        - Solicitud de Licencia de Ocupación: procedimientos/C045.md
+        - Solicitud de Licencia o Autorización Urbanística: procedimientos/C087.md
+        - Solicitud de Modificación o Renuncia de una Licencia Urbanística: procedimientos/C048.md
+        - Solicitud de Recepción de Obras de Urbanización: procedimientos/C050.md
+    

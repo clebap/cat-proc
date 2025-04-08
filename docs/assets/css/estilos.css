@@ -1,0 +1,126 @@
+ #contenedor-principal {
+    display: flex;
+    gap: 0.5rem;
+    margin-top: 2rem;
+    align-items: flex-start;
+  }
+  
+  /* Panel de filtros: más estrecho */
+  #filtros {
+    flex: 0 0 330px; /* antes 300px */
+    padding: 0.5rem;
+    border-right: 1px solid #ccc;
+    font-size: 0.85rem;
+  }
+  
+  /* Listado de trámites: más ancho */
+  #lista-procedimientos {
+    flex: 1 1 auto;
+  }
+  
+  #filtro-familias label {
+    margin-bottom: 2px;  /* Antes quizás era 10px u 8px */
+    font-size: 0.85em;
+    line-height: 0.1;
+  }
+
+  .filtro-bloque {
+    margin-bottom: 1rem;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+    font-size: 0.85em;
+  }
+  
+  .filtro-bloque p {
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+  }
+  
+  #titulo-filtro {
+    margin-top: 0.2rem;
+  }
+
+  #filtros label {
+    margin-bottom: 0.2rem;
+  }
+  
+  input[type="text"]#buscador {
+    width: 100%;
+    padding: 4px;
+    font-size: 0.85em;
+    border-radius: 4px;
+    border: 1px solid #aaa;
+  }
+  
+  .procedimiento {
+    border: 1px solid #ddd;
+    padding: 12px;
+    margin-bottom: 10px;
+    border-radius: 5px;
+  }
+  
+  .etiqueta {
+    font-size: 0.8em;
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-right: 8px;
+    color: white;
+  }
+  
+  .abierto {
+    background-color: #28a745;
+  }
+  
+  .cerrado {
+    background-color: #dc3545;
+  }
+  
+  
+ /* Oculta la barra lateral derecha (TOC) solo en la página de procedimientos */
+body.pagina-procedimientos .md-sidebar--primary,
+body.pagina-procedimientos .md-sidebar--secondary {
+  display: none !important;
+}
+
+body.pagina-procedimientos .md-main__inner,
+body.pagina-procedimientos .md-content,
+body.pagina-procedimientos .md-grid {
+  max-width: none;
+  width: 85%;
+  margin: 10;
+  padding: 0 2rem;
+}
+
+.md-typeset {
+  font-size: .7rem !important;
+}
+
+#buscador-superior {
+  display: flex;
+  justify-content: flex-end;
+}
+  
+#buscador-superior input[type="text"] {
+  padding: 6px;
+  width: 300px;
+  font-size: 1.1em;
+  border: 1px solid #aaa;
+  border-radius: 4px;
+}
+
+.md-header__button.md-logo img {
+    height: 62px !important; /* o el tamaño que quieras */
+    width: 56px;
+    filter: brightness(0) invert(1);
+}
+
+:root  > * {
+    --md-primary-fg-color: #006699;
+    --md-footer-bg-color: #006699;
+    --md-accent-fg-color: #b8b8b8;
+}
+
+body {
+    font-family: 'Source Sans 3', sans-serif;
+}
