@@ -77,30 +77,45 @@
   }
   
   
- /* Oculta la barra lateral derecha (TOC) solo en la página de procedimientos */
-body.pagina-procedimientos .md-sidebar--primary,
-body.pagina-procedimientos .md-sidebar--secondary {
+ /* Oculta la barra lateral derecha (TOC) solo en la página del buscador */
+body.pagina-buscador .md-sidebar--primary,
+body.pagina-buscador .md-sidebar--secondary {
   display: none !important;
 }
 
-body.pagina-procedimientos .md-main__inner,
-body.pagina-procedimientos .md-content,
-body.pagina-procedimientos .md-grid {
+body.pagina-buscador .md-main__inner,
+body.pagina-buscador .md-content,
+body.pagina-buscador .md-grid {
   max-width: none;
-  width: 85%;
   margin: 10;
   padding: 0 2rem;
 }
 
-.md-typeset {
-  font-size: .7rem !important;
+/* Oculta la barra lateral derecha (TOC) solo en algunas páginas */
+body.pagina-sin-rsidebar .md-sidebar--primary {
+  display: none !important;
+}
+
+body.pagina-sin-rsidebar .md-main__inner,
+body.pagina-sin-rsidebar .md-content,
+body.pagina-sin-rsidebar .md-grid {
+  max-width: none;
+  width: 85%;
+  padding: 0 2rem;
+}
+
+/* Ajustes visuales para nuevos filtros y buscador */
+#filtros {
+  overflow-y: auto;
+  /*max-height: 90vh;*/
 }
 
 #buscador-superior {
   display: flex;
   justify-content: flex-end;
+  margin-bottom: 1rem;
 }
-  
+
 #buscador-superior input[type="text"] {
   padding: 6px;
   width: 300px;
@@ -109,6 +124,16 @@ body.pagina-procedimientos .md-grid {
   border-radius: 4px;
 }
 
+.contador-resultados {
+  margin-bottom: 1em;
+  padding: 0.5em 0;
+}
+
+.md-typeset {
+  font-size: .7rem !important;
+}
+
+  
 .md-header__button.md-logo img {
     height: 62px !important; /* o el tamaño que quieras */
     width: 56px;
@@ -124,3 +149,13 @@ body.pagina-procedimientos .md-grid {
 body {
     font-family: 'Source Sans 3', sans-serif;
 }
+
+.mermaid {
+  display: block;
+  margin: 0 auto;
+  text-align: center;
+  transform: scale(0.85);
+  transform-origin: top center;
+}
+
+

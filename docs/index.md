@@ -1,45 +1,56 @@
-# Catálogo de procedimientos administrativos municipales
+## Catálogo de procedimientos administrativos de los ayuntamientos de Tenerife
 
-Este portal ofrece un acceso centralizado al **Catálogo de Procedimientos Administrativos** de los ayuntamientos de Tenerife, facilitando la consulta y navegación por los distintos trámites que las entidades locales ponen a disposición de la ciudadanía.
+Este portal proporciona un acceso unificado al **Catálogo de Procedimientos Administrativos** de los ayuntamientos de Tenerife. Su finalidad es facilitar la consulta, estructuración y tramitación de los procedimientos que las entidades locales ponen a disposición de la ciudadanía, conforme a las competencias que les reconoce la normativa vigente.
 
-El catálogo ha sido desarrollado en el marco del proyecto de consultoría del Cabildo Insular de Tenerife, con la colaboración de los 19 ayuntamientos participantes. Su objetivo es proporcionar una herramienta estructurada, accesible y coherente con la legislación vigente en materia de competencias municipales y procedimiento administrativo.
-
----
-
-## Agrupación por familias de procedimientos
-
-La organización de los procedimientos se ha realizado en torno a un conjunto de **familias temáticas**, definidas conforme a:
-
-- Las **competencias propias municipales** recogidas en la **Ley 7/1985, de 2 de abril**, reguladora de las Bases del Régimen Local.
-- Los principios de racionalización y sostenibilidad establecidos en la **Ley 27/2013, de 27 de diciembre**.
-- El marco general procedimental establecido en la **Ley 39/2015, de 1 de octubre**, del Procedimiento Administrativo Común.
-
-Estas familias permiten una clasificación funcional y homogénea de los procedimientos, facilitando tanto su consulta como su análisis técnico y jurídico. En total se han definido **35 familias**, entre las que se incluyen:
-
-- Urbanismo, Población y Territorio, Medio Ambiente
-- Gestión Fiscal y Tributaria, Tesorería, Contratación
-- Servicios Básicos, Infraestructura Viaria, Cementerios
-- Responsabilidad Patrimonial, Protección de Datos, Transparencia
-- Recursos Humanos, Secretaría General, Archivo
-- Quejas y Sugerencias, Participación Ciudadana, Actividad Económica
-- Y otras específicas como Instancia General o Alta a Terceros
+El catálogo está en continuo desarrollo y mejora en el marco del **servicio de Asistencia Técnica en Modernización** que el Cabildo Insular de Tenerife presta a los municipios, y constituye una herramienta de apoyo para la mejora de la gestión administrativa, la armonización intermunicipal y la transición digital de los servicios públicos locales.
 
 ---
 
-## Ámbito del catálogo
+### Fundamentación normativa
 
-Este catálogo incluye aquellos **procedimientos que han sido identificados como comunes a varios ayuntamientos**, partiendo de un conjunto preseleccionado de 163 procedimientos que están presentes en al menos dos entidades locales.
+La organización de los procedimientos responde a los principios establecidos en la normativa estatal y autonómica, especialmente:
 
-Cada procedimiento cuenta con una ficha detallada, que incluye información sobre su objeto, forma de iniciación, normativa aplicable, requisitos de presentación y otros aspectos relevantes. Estas fichas han sido revisadas y normalizadas a partir de la información aportada por los propios ayuntamientos.
+- **Ley 7/1985**, de Bases del Régimen Local  
+- **Ley 27/2013**, de racionalización y sostenibilidad de la Administración Local  
+- **Ley 39/2015**, del Procedimiento Administrativo Común de las Administraciones Públicas
+
+Estas leyes definen el marco competencial de los ayuntamientos y regulan los principios generales del procedimiento administrativo.
+
+---
+
+### Organización por familias temáticas
+
+Los procedimientos se agrupan en un conjunto de **35 familias temáticas**, definidas según:
+
+1. Las competencias propias reconocidas en la normativa vigente  
+2. Las categorías funcionales observadas en la tramitación de los ayuntamientos
+
+Esta clasificación facilita la navegación, permite una estructuración homogénea y sirve de base para el análisis técnico y jurídico del catálogo.
+
+Ejemplos de familias: Urbanismo, Gestión Tributaria, Cementerios, Protección de Datos, Transparencia, Secretaría General, Participación Ciudadana, entre otras.
+
+---
+
+### Contenido del catálogo
+
+El catálogo incluye en torno a **90 procedimientos comunes**, identificados por su presencia en al menos ocho ayuntamientos. Cada procedimiento dispone de una ficha normalizada que recoge: Código y nombre del procedimiento, Familia temática, Objeto o finalidad, Forma y plazo de presentación, Requisitos y documentación, Normativa aplicable, Efecto del silencio administrativo, Recursos administrativos procedentes, etc.
+
+La información ha sido recopilada a partir de fuentes municipales y adaptada para facilitar su reutilización institucional.
 
 ---
 
 ## Coordinación y mantenimiento
 
-El Cabildo Insular de Tenerife asume funciones de **coordinación y soporte técnico** para la armonización y actualización de los procedimientos incluidos en este catálogo. Este trabajo se enmarca en las competencias que el Cabildo ejerce respecto a los municipios con población inferior a 20.000 habitantes, tal y como establece la normativa vigente.
+El Cabildo Insular de Tenerife asume la **coordinación técnica** del catálogo en el ejercicio de sus competencias de asistencia a municipios de menos de 20.000 habitantes. Además, proporciona soporte metodológico para su mantenimiento y evolución.
+
+Este catálogo es un **elemento vivo** en continua mejora. Su contenido será revisado, ampliado y perfeccionado progresivamente con la participación activa del Cabildo y los ayuntamientos, en un proceso colaborativo orientado a la calidad y a la utilidad pública.
 
 ---
 
-Este portal está en continua evolución. Su contenido será revisado y ampliado conforme se definan los procedimientos definitivos y se validen las asignaciones de familias por parte de los ayuntamientos y el propio Cabildo.
+## Aviso legal
 
-[Ir al catálogo de procedimientos](procedimientos.md)
+**Este catálogo tiene carácter informativo y orientativo. Su contenido no tiene valor jurídico vinculante y no sustituye a la normativa vigente ni a la información oficial publicada por los ayuntamientos en sus respectivas sedes electrónicas.**
+
+---
+
+[Ir al buscador de procedimientos](buscador.md)

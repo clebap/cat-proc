@@ -1,0 +1,35 @@
+site_name: cat-procs-ayto-tfe
+site_name: Catálogo de procedimientos municipales
+site_description: Documentación de los Procedimientos administrativos de los municipios de la Isla de Tenerife.
+
+theme:
+  name: material
+  language: es
+  features:
+    - navigation.tabs
+    - navigation.top
+    - search.highlight
+    - search.suggest
+  logo: assets/images/logo.svg
+  favicon: assets/images/logo.svg
+  custom_dir: overrides
+
+markdown_extensions:
+  - admonition
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.details
+
+extra_css:
+  - assets/css/estilos.css
+extra_javascript:
+  - assets/js/filtros.js
+  - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
+
+nav:
+  - Inicio: index.md
+  - Buscador: buscador.md
+  - Fichas:
+# === NAV_PLACEHOLDER ===
