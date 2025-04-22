@@ -93,13 +93,13 @@ body.pagina-buscador .md-grid {
 }
 
 /* Oculta la barra lateral derecha (TOC) solo en algunas páginas */
-body.pagina-sin-rsidebar .md-sidebar--primary {
+body.pagina-sin-lsidebar .md-sidebar--primary {
   display: none !important;
 }
 
-body.pagina-sin-rsidebar .md-main__inner,
-body.pagina-sin-rsidebar .md-content,
-body.pagina-sin-rsidebar .md-grid {
+body.pagina-sin-lsidebar .md-main__inner,
+body.pagina-sin-lsidebar .md-content,
+body.pagina-sin-lsidebar .md-grid {
   max-width: none;
   width: 85%;
   padding: 0 2rem;
