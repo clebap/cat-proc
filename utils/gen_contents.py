@@ -28,6 +28,11 @@ def cargar_plantilla(path):
 
 def generar_fichas(df, plantilla):
     for _, row in df.iterrows():
+
+        diagrama = limpiar(row["Diagrama"])
+        if diagrama != "(sin datos)":
+            diagrama = f"```mermaid\n{diagrama}\n```"
+
         contenido = plantilla.format(
             codigo=limpiar(row["Clave"]),
             familia=limpiar(row["Familia"]),
@@ -40,7 +45,7 @@ def generar_fichas(df, plantilla):
             efecto_silencio=limpiar(row["Efecto del silencio"]),
             normativa=limpiar(row["Normativa"]),
             recursos=limpiar(row["Recursos"]),
-            diagrama=limpiar(row["Diagrama"])
+            diagrama=diagrama
         )
         cod = f"{row['Clave'].strip()}.md"
         with open(os.path.join(FICHAS_DIR, cod), "w", encoding="utf-8") as f:

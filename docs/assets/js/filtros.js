@@ -35,8 +35,8 @@ function activarFiltros() {
   
   if (typeof document$ !== "undefined") {
     document$.subscribe(() => {
-      if (window.location.pathname === '/') {
-        document.body.classList.add("pagina-sin-rsidebar");
+      if (window.location.pathname === '/' || window.location.pathname == '/cat-proc/') {
+        document.body.classList.add("pagina-sin-lsidebar");
       }
       if (window.location.pathname.includes("/buscador")) {
         activarFiltros();
