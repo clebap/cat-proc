@@ -9,8 +9,9 @@
   #filtros {
     flex: 0 0 330px; /* antes 300px */
     padding: 0.5rem;
-    border-right: 1px solid #ccc;
+    /*border-right: 1px solid #ccc;*/
     font-size: 0.85rem;
+    overflow-y: auto;
   }
   
   /* Listado de trámites: más ancho */
@@ -105,10 +106,7 @@ body.pagina-sin-rsidebar .md-grid {
 }
 
 /* Ajustes visuales para nuevos filtros y buscador */
-#filtros {
-  overflow-y: auto;
-  /*max-height: 90vh;*/
-}
+
 
 #buscador-superior {
   display: flex;
@@ -125,8 +123,9 @@ body.pagina-sin-rsidebar .md-grid {
 }
 
 .contador-resultados {
-  margin-bottom: 1em;
+  margin-bottom: 0.2rem;
   padding: 0.5em 0;
+  font-weight: bold;
 }
 
 .md-typeset {

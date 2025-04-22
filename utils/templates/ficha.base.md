@@ -1,44 +1,49 @@
 
-**Código de clasificación:** {codigo}  
+**Código de clasificación:** {codigo}
 **Familia:** {familia}
 
 ---
 
-#### Objeto / Descripción
+### OBJETO / DESCRIPCIÓN
 
-(sin datos)
+{descripcion}
 
-#### Forma de presentación
+### FORMA DE PRESENTACIÓN
 
-Electrónica
+{forma_presentacion}
 
-#### Plazo de presentación
+### PLAZO DE PRESENTACIÓN
 
-Continuo
+{plazo_presentacion}
 
-#### Requisitos y documentación
+### FORMA DE INICIACIÓN
+
+{forma_iniciacion}
+
+### REQUISITOS Y DOCUMENTACIÓN
 
 {requisitos}
 
-#### Órgano de resolución
+### ÓRGANO DE RESOLUCIÓN
 
-(sin datos)
+{organo_resolucion}
 
-#### Efecto del silencio
+### EFECTO DEL SILENCIO
 
-Según normativa
+{efecto_silencio}
 
-#### Normativa aplicable
+### NORMATIVA APLICABLE
 
 {normativa}
 
-#### Recursos
+### RECURSOS
 
-(sin datos)
+{recursos}
 
-#### Diagrama
+### DIAGRAMA
 
-(sin datos)
+```mermaid
+{diagrama}
+```
 
- 
 [← Volver al catálogo de procedimientos](../buscador.md)

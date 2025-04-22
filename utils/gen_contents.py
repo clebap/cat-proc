@@ -16,36 +16,11 @@ BUSCADOR_PATH = "../docs/buscador.md"
 # Crear carpeta de fichas si no existe
 os.makedirs(FICHAS_DIR, exist_ok=True)
 
-def limpiar_enumerado(texto):
-    if pd.isna(texto):
+# Función para limpiar contenido
+def limpiar(texto):
+    if pd.isna(texto) or str(texto).strip() == "":
         return "(sin datos)"
-    lineas = [line.strip("•–- 	") for line in str(texto).splitlines() if line.strip()]
-    if not lineas:
-        return "(sin datos)"
-    return "\n" + "\n".join(f"- {l}" for l in lineas)
-
-def limpiar_normativa(texto):
-    if pd.isna(texto):
-        return "(sin datos)"
-    entradas = [line.strip("•–- 	") for line in str(texto).splitlines() if line.strip()]
-    resultado = []
-    leyes = []
-    for line in entradas:
-        l = unicodedata.normalize("NFKD", line.lower())
-        if any(base in l for base in leyes):
-            continue
-        if "ley " in l:
-            base = re.findall(r"ley\s[\d/]+", l)
-            if base:
-                leyes.append(base[0])
-        elif "real decreto" in l:
-            base = re.findall(r"real decreto\s[\d/]+", l)
-            if base:
-                leyes.append(base[0])
-        resultado.append(line)
-    if not resultado:
-        return "(sin datos)"
-    return "\n" + "\n".join(f"- {r}" for r in resultado)
+    return str(texto).strip()
 
 def cargar_plantilla(path):
     with open(path, "r", encoding="utf-8") as f:
@@ -53,21 +28,22 @@ def cargar_plantilla(path):
 
 def generar_fichas(df, plantilla):
     for _, row in df.iterrows():
-        cod = str(row["Clave"]).strip()
-        nombre = str(row["Procedimiento"]).strip().capitalize()
-        familia = str(row["Familia"]).strip().upper()
-        requisitos = limpiar_enumerado(row.get("Requisitos y documentación", ""))
-        normativa = limpiar_normativa(row.get("Normativa", ""))
-
         contenido = plantilla.format(
-            titulo=nombre,
-            codigo=cod,
-            familia=familia,
-            requisitos=requisitos,
-            normativa=normativa
+            codigo=limpiar(row["Clave"]),
+            familia=limpiar(row["Familia"]),
+            descripcion=limpiar(row["Objeto / Descripción"]),
+            forma_presentacion=limpiar(row["Forma de presentación"]),
+            plazo_presentacion=limpiar(row["Plazo de presentación"]),
+            forma_iniciacion=limpiar(row["Forma de iniciación"]),
+            requisitos=limpiar(row["Requisitos y documentación"]),
+            organo_resolucion=limpiar(row["Órgano de resolución"]),
+            efecto_silencio=limpiar(row["Efecto del silencio"]),
+            normativa=limpiar(row["Normativa"]),
+            recursos=limpiar(row["Recursos"]),
+            diagrama=limpiar(row["Diagrama"])
         )
-
-        with open(os.path.join(FICHAS_DIR, f"{cod}.md"), "w", encoding="utf-8") as f:
+        cod = f"{row['Clave'].strip()}.md"
+        with open(os.path.join(FICHAS_DIR, cod), "w", encoding="utf-8") as f:
             f.write(contenido)
 
 def generar_nav_yml(df):
@@ -159,8 +135,7 @@ def generar_buscador_md(df):
 
 def main():
     df = pd.read_excel(EXCEL_PATH, header=3)
-    df.columns = [str(c).strip() for c in df.columns]
-    df = df[df["Clave"].notna() & df["Procedimiento"].notna() & df["Familia"].notna()]
+    df.columns = [str(c).strip() for c in df.columns]    
     plantilla = cargar_plantilla(TEMPLATE_FICHA)
     generar_fichas(df, plantilla)
     generar_nav_yml(df)
