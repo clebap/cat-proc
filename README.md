@@ -1,64 +1,88 @@
+# Catálogo de procedimientos administrativos municipales 
 
-# Catálogo de Procedimientos Administrativos Municipales · Tenerife
+Este repositorio contiene el código y los contenidos del **Catálogo de Procedimientos Administrativos** de los ayuntamientos de Tenerife. Ha sido desarrollado por el **Cabildo Insular de Tenerife** dentro del servicio de **Asistencia Técnica en Modernización**, en colaboración con los ayuntamientos participantes.
 
-Este repositorio contiene el código y los contenidos del **Catálogo de Procedimientos Administrativos** de los ayuntamientos de Tenerife, una iniciativa desarrollada por el **Cabildo Insular de Tenerife** en el marco del servicio de **Asistencia Técnica en Modernización**.
+El portal tiene como finalidad ofrecer una plataforma unificada, accesible y estructurada para consultar los procedimientos administrativos comunes a los municipios de la isla.
 
-Su objetivo es proporcionar un portal unificado, estructurado y accesible para consultar los procedimientos administrativos comunes a los municipios de la isla.
+---
 
-## 📂 Estructura del repositorio
+## Estructura del repositorio
 
 ```
 .
-├── docs/                    # Contenidos publicados en el portal
-│   ├── fichas/              # Fichas Markdown de cada procedimiento (una por código)
-│   ├── buscador.md          # Página de catálogo con buscador y filtros
-│   ├── index.md             # Página de inicio del portal
-│   └── ...                  # Otros contenidos complementarios
-├── data/                    # Documentación y fuentes originales (Excel)
-│   └── Borrador_Propuesta catálogo_90 procedimientos.xlsx
-├── scripts/                 # Scripts de generación automática
-│   └── generar_nav_y_fichas.py
-├── mkdocs.yml               # Configuración principal de MkDocs
-├── mkdocs.base.yml          # Plantilla base de mkdocs.yml con marcador dinámico
-├── mkdocs.nav.yml           # Fragmento YAML generado automáticamente con el bloque nav:
-└── README.md                # Este archivo
+├── docs/                          # Contenidos publicados por MkDocs
+│   ├── fichas/                    # Fichas individuales en Markdown (una por procedimiento)
+│   ├── buscador.md                # Página con el buscador interactivo y filtros dinámicos
+│   ├── index.md                   # Página de inicio del portal
+│   ├── estilos.css                # Estilos personalizados
+│   ├── filtros.js                 # Lógica de filtrado y buscador en JS
+│   └── plantilla_ficha.md         # Plantilla base para generación de fichas
+├── data/
+│   └── Borrador_Propuesta catálogo_90 procedimientos.xlsx  # Excel con la información origen
+├── scripts/
+│   ├── gen_contents.py            # Generación automática de contenidos
+│   └── otros scripts auxiliares...
+├── mkdocs.yml                     # Configuración principal de MkDocs
+├── mkdocs.base.yml               # Plantilla con marcador para inserción automática del bloque nav
+├── mkdocs.nav.yml                # Fragmento YAML generado automáticamente con la navegación
+└── README.md                      # Este documento
 ```
 
-## ⚙️ Automatización
+---
 
-El repositorio incluye un proceso automático para generar:
+## Automatización del catálogo
 
-- La navegación (`nav:`) de `mkdocs.yml` agrupada por familias.
-- Las fichas Markdown de cada procedimiento (`docs/fichas/*.md`), a partir del Excel.
+La construcción del portal está automatizada a partir del contenido del Excel. El script principal se encarga de:
 
-Este proceso se ejecuta con el script:
+- Generar todas las fichas `.md` de procedimientos con estructura normalizada.
+- Insertar los diagramas Mermaid definidos en la hoja de cálculo.
+- Crear dinámicamente la estructura `nav:` de `mkdocs.yml`, agrupada por familias.
+- Actualizar la página `buscador.md` con los filtros y procedimientos disponibles.
+
+### Cómo ejecutar
+
+Asegúrate de tener un entorno Python con pandas y openpyxl instalados:
 
 ```bash
-python scripts/generar_nav_y_fichas.py
+pip install pandas openpyxl
 ```
 
-> El script utiliza una plantilla externa (`plantilla_ficha_procedimiento.md`) para generar el contenido de cada ficha.
+Ejecuta el script principal:
 
-## 🏗 Construcción del portal
+```bash
+python scripts/gen_contents.py
+```
 
-El sitio está construido con [**MkDocs**](https://www.mkdocs.org/) y el tema [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
+> El script leerá el Excel actualizado y generará automáticamente los contenidos en `docs/fichas/`, `mkdocs.nav.yml` y `buscador.md`.
 
-Para iniciar el portal en local:
+---
+
+## Construcción del sitio
+
+Este proyecto utiliza [**MkDocs**](https://www.mkdocs.org/) junto con el tema [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
+
+### Servidor local para desarrollo
 
 ```bash
 mkdocs serve
 ```
 
-Para generar el sitio estático:
+### Generar el sitio estático
 
 ```bash
 mkdocs build
 ```
 
-## ❗ Aviso legal
+---
 
-Este catálogo tiene carácter **informativo y orientativo**. Su contenido **no es jurídicamente vinculante** ni sustituye la información publicada por los ayuntamientos en sus sedes electrónicas.
+## Aviso legal
 
-## 🤝 Licencia y colaboración
+Este portal tiene carácter **informativo y orientativo**. Su contenido **no es jurídicamente vinculante** ni sustituye la información oficial publicada por los ayuntamientos en sus sedes electrónicas.
 
-Este proyecto es una iniciativa abierta a la colaboración entre el **Cabildo Insular de Tenerife** y los **ayuntamientos de la isla**. El contenido evoluciona de forma progresiva y colaborativa, y puede ser reutilizado y adaptado por otras entidades locales.
+Además, el catálogo es un **elemento vivo** en constante evolución, sujeto a revisión y mejora progresiva por parte de los municipios y del Cabildo.
+
+---
+
+## Licencia y colaboración
+
+El contenido de este repositorio forma parte de una iniciativa abierta a la colaboración institucional entre el **Cabildo de Tenerife** y los **ayuntamientos de la isla**. Puede ser reutilizado y adaptado por otras entidades públicas que persigan fines similares de mejora administrativa y transparencia.
