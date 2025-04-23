@@ -1,125 +1,55 @@
- #contenedor-principal {
-    display: flex;
-    gap: 0.5rem;
-    margin-top: 2rem;
-    align-items: flex-start;
-  }
-  
-  /* Panel de filtros: más estrecho */
-  #filtros {
-    flex: 0 0 330px; /* antes 300px */
-    padding: 0.5rem;
-    /*border-right: 1px solid #ccc;*/
-    font-size: 0.85rem;
-    overflow-y: auto;
-  }
-  
-  /* Listado de trámites: más ancho */
-  #lista-procedimientos {
-    flex: 1 1 auto;
-  }
-  
-  #filtro-familias label {
-    margin-bottom: 2px;  /* Antes quizás era 10px u 8px */
-    font-size: 0.85em;
-    line-height: 0.1;
-  }
-
-  .filtro-bloque {
-    margin-bottom: 1rem;
-    padding: 0.8rem;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 0.85em;
-  }
-  
-  .filtro-bloque p {
-    font-weight: bold;
-    margin-bottom: 0.3rem;
-  }
-  
-  #titulo-filtro {
-    margin-top: 0.2rem;
-  }
-
-  #filtros label {
-    margin-bottom: 0.2rem;
-  }
-  
-  input[type="text"]#buscador {
-    width: 100%;
-    padding: 4px;
-    font-size: 0.85em;
-    border-radius: 4px;
-    border: 1px solid #aaa;
-  }
-  
-  .procedimiento {
-    border: 1px solid #ddd;
-    padding: 12px;
-    margin-bottom: 10px;
-    border-radius: 5px;
-  }
-  
-  .etiqueta {
-    font-size: 0.8em;
-    padding: 2px 6px;
-    border-radius: 4px;
-    margin-right: 8px;
-    color: white;
-  }
-  
-  .abierto {
-    background-color: #28a745;
-  }
-  
-  .cerrado {
-    background-color: #dc3545;
-  }
-  
-  
- /* Oculta la barra lateral derecha (TOC) solo en la página del buscador */
-body.pagina-buscador .md-sidebar--primary,
-body.pagina-buscador .md-sidebar--secondary {
-  display: none !important;
+#contenedor-principal {
+  flex-direction: column;
 }
 
-body.pagina-buscador .md-main__inner,
-body.pagina-buscador .md-content,
-body.pagina-buscador .md-grid {
-  max-width: none;
-  margin: 10;
-  padding: 0 2rem;
+#contenedor-filtros summary {
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  padding-left: 0.5rem;
+  font-weight: 100;
+  padding-bottom: .3rem;
+  padding-top: .3rem;
+  background-color: #006699;
+  color: var(--md-primary-bg-color);
 }
 
-/* Oculta la barra lateral derecha (TOC) solo en algunas páginas */
-body.pagina-sin-lsidebar .md-sidebar--primary {
-  display: none !important;
+#contenedor-filtros summary:before {
+  content: unset !important;
 }
 
-body.pagina-sin-lsidebar .md-main__inner,
-body.pagina-sin-lsidebar .md-content,
-body.pagina-sin-lsidebar .md-grid {
-  max-width: none;
-  width: 85%;
-  padding: 0 2rem;
+#filtros {
+  max-height: 300px;
+  overflow-y: auto;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  border-radius: 6px;
 }
 
-/* Ajustes visuales para nuevos filtros y buscador */
+#lista-procedimientos {
+  margin-top: 1rem;
+}
 
+.procedimiento {
+  border: 1px solid #ddd;
+  padding: 12px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+}
+
+/* Ajustes visuales para buscador */
 
 #buscador-superior {
-  display: flex;
-  justify-content: flex-end;
+  justify-content: center;
   margin-bottom: 1rem;
 }
 
 #buscador-superior input[type="text"] {
+  width: 100%;
   padding: 6px;
-  width: 300px;
   font-size: 1.1em;
   border: 1px solid #aaa;
-  border-radius: 4px;
+  border-radius: 4px; 
 }
 
 .contador-resultados {
@@ -131,22 +61,21 @@ body.pagina-sin-lsidebar .md-grid {
 .md-typeset {
   font-size: .7rem !important;
 }
-
   
 .md-header__button.md-logo img {
-    height: 62px !important; /* o el tamaño que quieras */
-    width: 56px;
-    filter: brightness(0) invert(1);
+  height: 62px !important; /* o el tamaño que quieras */
+  width: 56px;
+  filter: brightness(0) invert(1);
 }
 
 :root  > * {
-    --md-primary-fg-color: #006699;
-    --md-footer-bg-color: #006699;
-    --md-accent-fg-color: #b8b8b8;
+  --md-primary-fg-color: #006699;
+  --md-footer-bg-color: #006699;
+  --md-accent-fg-color: #b8b8b8;
 }
 
 body {
-    font-family: 'Source Sans 3', sans-serif;
+  font-family: 'Source Sans 3', sans-serif;
 }
 
 .mermaid {
@@ -156,5 +85,4 @@ body {
   transform: scale(0.85);
   transform-origin: top center;
 }
-
 
