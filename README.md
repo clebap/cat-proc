@@ -1,73 +1,69 @@
-# Catálogo de procedimientos administrativos municipales 
+# Catálogo de procedimientos municipales comunes de Tenerife
 
-Este repositorio contiene el código y los contenidos del **Catálogo de Procedimientos Administrativos** de los ayuntamientos de Tenerife. Ha sido desarrollado por el **Cabildo Insular de Tenerife** dentro del servicio de **Asistencia Técnica en Modernización**, en colaboración con los ayuntamientos participantes.
+Este repositorio contiene el código fuente y los contenidos del **Catálogo Común de Procedimientos Administrativos** de los ayuntamientos de Tenerife. Ha sido desarrollado por el **Cabildo Insular de Tenerife** como parte del servicio de **Asistencia Técnica en Modernización**, en colaboración con los ayuntamientos participantes.
 
-El portal tiene como finalidad ofrecer una plataforma unificada, accesible y estructurada para consultar los procedimientos administrativos comunes a los municipios de la isla.
+Su propósito es ofrecer un **portal unificado, accesible y estructurado** para la consulta y tramitación de procedimientos administrativos comunes a nivel local.
 
 ---
 
-## Estructura del repositorio
+## 📁 Estructura del repositorio
 
 ```
 .
-├── docs/                          # Contenidos publicados por MkDocs
-│   ├── fichas/                    # Fichas individuales en Markdown (una por procedimiento)
-│   ├── buscador.md                # Página con el buscador interactivo y filtros dinámicos
+├── docs/                          # Contenidos publicados en el portal
+│   ├── assets/                    # Archivos estáticos
+│   │  ├── estilos.css             # Estilos personalizados para el tema
+│   │  └── filtros.js              # Lógica de búsqueda y filtrado en JS
+│   ├── fichas/                    # Fichas Markdown de cada procedimiento
+│   ├── buscador.md                # Catálogo con buscador y filtros dinámicos
 │   ├── index.md                   # Página de inicio del portal
-│   ├── estilos.css                # Estilos personalizados
-│   ├── filtros.js                 # Lógica de filtrado y buscador en JS
-│   └── plantilla_ficha.md         # Plantilla base para generación de fichas
+│   └── plantilla_ficha.md         # Plantilla base para las fichas
 ├── data/
-│   └── Borrador_Propuesta catálogo_90 procedimientos.xlsx  # Excel con la información origen
+│   └── Borrador_Propuesta catálogo_90 procedimientos.xlsx  # Fuente de datos
 ├── scripts/
-│   ├── gen_contents.py            # Generación automática de contenidos
-│   └── otros scripts auxiliares...
+│   └── gen_contents.py            # Generación automática de contenidos
 ├── mkdocs.yml                     # Configuración principal de MkDocs
-├── mkdocs.base.yml               # Plantilla con marcador para inserción automática del bloque nav
-├── mkdocs.nav.yml                # Fragmento YAML generado automáticamente con la navegación
+├── mkdocs.base.yml                # Plantilla base con marcador para 'nav'
+├── mkdocs.nav.yml                 # Fragmento generado automáticamente
 └── README.md                      # Este documento
 ```
 
 ---
 
-## Automatización del catálogo
+## ⚙️ Automatización del catálogo
 
-La construcción del portal está automatizada a partir del contenido del Excel. El script principal se encarga de:
+El contenido del portal se genera automáticamente a partir de un fichero Excel mediante un script Python que:
 
-- Generar todas las fichas `.md` de procedimientos con estructura normalizada.
-- Insertar los diagramas Mermaid definidos en la hoja de cálculo.
-- Crear dinámicamente la estructura `nav:` de `mkdocs.yml`, agrupada por familias.
-- Actualizar la página `buscador.md` con los filtros y procedimientos disponibles.
+- Crea todas las fichas `.md` normalizadas con información enriquecida.
+- Inserta diagramas de flujo Mermaid desde el Excel.
+- Genera el bloque `nav:` para `mkdocs.yml`, agrupado por familias.
+- Actualiza la página `buscador.md` con filtros y listado de procedimientos.
 
-### Cómo ejecutar
-
-Asegúrate de tener un entorno Python con pandas y openpyxl instalados:
+### Requisitos
 
 ```bash
 pip install pandas openpyxl
 ```
 
-Ejecuta el script principal:
+### Ejecución
 
 ```bash
 python scripts/gen_contents.py
 ```
 
-> El script leerá el Excel actualizado y generará automáticamente los contenidos en `docs/fichas/`, `mkdocs.nav.yml` y `buscador.md`.
-
 ---
 
-## Construcción del sitio
+## 🚧 Construcción del portal
 
-Este proyecto utiliza [**MkDocs**](https://www.mkdocs.org/) junto con el tema [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
+El proyecto utiliza [**MkDocs**](https://www.mkdocs.org/) con el tema [**Material for MkDocs**](https://squidfunk.github.io/mkdocs-material/).
 
-### Servidor local para desarrollo
+### Para desarrollo local
 
 ```bash
 mkdocs serve
 ```
 
-### Generar el sitio estático
+### Para generar el sitio estático
 
 ```bash
 mkdocs build
@@ -75,14 +71,57 @@ mkdocs build
 
 ---
 
-## Aviso legal
+## 🌐 Publicación en GitHub Pages
 
-Este portal tiene carácter **informativo y orientativo**. Su contenido **no es jurídicamente vinculante** ni sustituye la información oficial publicada por los ayuntamientos en sus sedes electrónicas.
+### 1. Inicializa el repositorio
 
-Además, el catálogo es un **elemento vivo** en constante evolución, sujeto a revisión y mejora progresiva por parte de los municipios y del Cabildo.
+```bash
+git init
+git add .
+git commit -m "Versión inicial"
+```
+
+### 2. Añade el remoto de GitHub
+
+```bash
+git remote add origin https://github.com/TU_USUARIO/TU_REPO.git
+```
+
+### 3. Sube el contenido a la rama `main`
+
+```bash
+git branch -M main
+git push -u origin main
+```
+
+### 4. Publica con `gh-deploy`
+
+```bash
+mkdocs gh-deploy
+```
+
+Esto compilará el sitio y subirá el contenido generado a la rama `gh-pages`.
+
+### 5. Configura GitHub Pages
+
+En GitHub:
+
+- Ve a **Settings → Pages**
+- Fuente: rama `gh-pages`, carpeta `/ (root)`
+- Guarda los cambios
+
+Tu sitio estará disponible en: `https://TU_USUARIO.github.io/TU_REPO/`
 
 ---
 
-## Licencia y colaboración
+## ℹ️ Aviso legal
 
-El contenido de este repositorio forma parte de una iniciativa abierta a la colaboración institucional entre el **Cabildo de Tenerife** y los **ayuntamientos de la isla**. Puede ser reutilizado y adaptado por otras entidades públicas que persigan fines similares de mejora administrativa y transparencia.
+Este portal tiene carácter **informativo y orientativo**. Su contenido **no tiene validez jurídica** y no sustituye a la información publicada en las sedes electrónicas oficiales de los ayuntamientos.
+
+El catálogo es un recurso **vivo y en constante evolución**, sujeto a validaciones y mejoras por parte de los municipios y del Cabildo Insular de Tenerife.
+
+---
+
+## 🤝 Licencia y colaboración
+
+Este repositorio promueve la **colaboración interadministrativa** entre el Cabildo y los ayuntamientos de la isla. Su contenido puede ser reutilizado, adaptado y ampliado por otras entidades públicas en el marco de iniciativas de modernización y mejora administrativa.

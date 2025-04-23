@@ -1,5 +1,6 @@
 
 **Código de clasificación:** {codigo}
+
 **Familia:** {familia}
 
 ---
@@ -42,8 +43,6 @@
 
 ### DIAGRAMA
 
-```mermaid
 {diagrama}
-```
 
-[← Volver al catálogo de procedimientos](../buscador.md)
+[← Volver al buscador de procedimientos](../buscador.md)

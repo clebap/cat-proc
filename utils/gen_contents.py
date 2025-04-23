@@ -88,17 +88,16 @@ def generar_buscador_md(df):
     familias = sorted(set(df["Familia"].dropna().str.strip().str.upper()))
 
     filtro_html = [
-        '<div class="filtro-bloque">',
-        '  <p><strong>Familias</strong></p>',
-        '  <div id="filtro-familias">',
-        '    <label><input type="radio" name="familia" value="todas" checked> Todas las familias</label><br>'
+        '          <p><strong>Familias</strong></p>'
+        '          <div id="filtro-familias">'
+        '               <label><input type="radio" name="familia" value="todas" checked> Todas las familias</label><br>'
     ]
 
     for fam in familias:
         valor = re.sub(r"[^\w]+", "-", fam.lower()).strip("-")
-        filtro_html.append(f'    <label><input type="radio" name="familia" value="{valor}"> {fam}</label><br>')
+        filtro_html.append(f'               <label><input type="radio" name="familia" value="{valor}"> {fam}</label><br>')
 
-    filtro_html += ['  </div>', '</div>']
+    filtro_html += ['      </div>']
 
     procedimientos_html = []
     for _, row in df.iterrows():
@@ -107,26 +106,27 @@ def generar_buscador_md(df):
         familia = str(row["Familia"]).strip().upper()
         valor = re.sub(r"[^\w]+", "-", familia.lower()).strip("-")
         procedimientos_html.append(
-            f'<div class="procedimiento" data-familia="{valor}">\n'
-            f'<a href="../fichas/{cod}">{nombre}</a><br/>\n'
-            f'Código: {cod}<br/>\n'
-            f'Familia: {familia}\n'
-            f'</div>'
+            f'       <div class="procedimiento" data-familia="{valor}">\n'
+            f'         <a href="../fichas/{cod}">{nombre}</a><br/>\n'
+            f'         Código: {cod}<br/>\n'
+            f'         Familia: {familia}\n'
+            f'       </div>'
         )
 
     final = '\n'.join([
         '<div id="contenedor-principal">',
-        '',
-        '  <div id="filtros">',
-        '    <h3 id="titulo-filtro">Filtrar resultados</h3>',
+        '    <div id="buscador-superior">',
+        '        <input type="text" id="buscador" placeholder="Buscar procedimientos...">',
+        '    </div>',
+        '    <details id="contenedor-filtros">',
+        '       <summary>Filtros disponibles</summary>',
+        '       <div id="filtros">',
         *filtro_html,
+        '    </div>', 
         '  </div>',
         '',
         '  <div style="flex: 1;">',
-        '    <div id="buscador-superior">',
-        '      <input type="text" id="buscador" placeholder="Buscar procedimientos...">',
-        '    </div>',
-        '    <div id="contador-resultados" class="contador-resultados">Se han encontrado 0 procedimientos</div>',
+        '    <div id="contador-resultados" class="contador-resultados"></div>',
         '    <div id="lista-procedimientos">',
         *procedimientos_html,
         '    </div>',

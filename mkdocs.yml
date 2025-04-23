@@ -1,6 +1,6 @@
 site_name: cat-procs-ayto-tfe
-site_name: Catálogo de procedimientos municipales
-site_description: Documentación de los Procedimientos administrativos de los municipios de la Isla de Tenerife.
+site_name: Catálogo de procedimientos municipales comunes de la Isla de Tenerife
+site_description: Documentación de los Procedimientos administrativos de los municipios de la Isla de Tenerife
 site_url: https://clebap.github.io/cat-proc/
 
 theme:
@@ -30,7 +30,10 @@ extra_javascript:
   - https://unpkg.com/mermaid@10.4.0/dist/mermaid.min.js
 
 nav:
-  - Inicio: index.md
+  - Inicio: 
+    - Introducción: index.md
+    - Familias: familias.md
+    - Mantenimiento: mantenimiento.md
   - Buscador: buscador.md
   - Fichas:
     - ACTIVIDAD ECONÓMICA Y CONSUMO:
