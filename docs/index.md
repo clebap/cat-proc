@@ -1,7 +1,7 @@
 
-Este portal proporciona un acceso unificado al **Catálogo unificado de procedimientos administrativos de los municipios de Tenerife** de los ayuntamientos de Tenerife. Su finalidad es facilitar la consulta, estructuración y tramitación de los procedimientos que las entidades locales ponen a disposición de la ciudadanía, conforme a las competencias que les reconoce la normativa vigente.
+Este portal proporciona acceso al **Catálogo de procedimientos municipales de Tenerife**. Su finalidad es facilitar la consulta de los procedimientos que las entidades locales ponen a disposición de la ciudadanía, conforme a las competencias que les reconoce la normativa vigente.
 
-El catálogo está en continuo desarrollo y mejora en el marco del **servicio de Asistencia Técnica en Modernización** que el Cabildo Insular de Tenerife presta a los municipios, y constituye una herramienta de apoyo para la mejora de la gestión administrativa, la armonización intermunicipal y la transición digital de los servicios públicos locales.
+El catálogo está en continuo desarrollo y mejora en el marco del **servicio de Asistencia Técnica en Modernización** que el Cabildo de Tenerife presta a los municipios, y constituye una herramienta de apoyo para la mejora de la gestión administrativa y la armonización intermunicipal.
 
 ### Fundamentación normativa
 
@@ -10,6 +10,8 @@ La organización de los procedimientos responde a los principios establecidos en
 - **Ley 7/1985**, de Bases del Régimen Local  
 - **Ley 27/2013**, de racionalización y sostenibilidad de la Administración Local  
 - **Ley 39/2015**, del Procedimiento Administrativo Común de las Administraciones Públicas
+- **Ley 7/2015**, de 1 de abril, de los municipios de Canarias 
+- **Ley 8/2015**, de 1 de abril de cabildos insulares
 
 Estas leyes definen el marco competencial de los ayuntamientos y regulan los principios generales del procedimiento administrativo.
 
